@@ -3,12 +3,11 @@ class Solution {
         if (num < 2) {
             return true;
         }
-        long temp = num/2;
-        
-        while (temp * temp > num) {
-            temp = (num/temp + temp)/2;
+        long i = 1;
+        while (i * i < num) {
+            i++;
         }
-        return temp * temp == num;
+        return i*i == num;
         
     }
 }
